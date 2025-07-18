@@ -3,7 +3,7 @@
 
     It allows users to enter a news article, and the app predicts whether it is Fake or Real.
 
-# **🚀 Features**
+## **🚀 Features**
        ✅ Web interface using Flask
 
        ✅ Pre-trained Naive Bayes model
@@ -12,7 +12,7 @@
        
        ✅ Lightweight and easy to deploy
 
-# **📂 Project Structure**
+## **📂 Project Structure**
 
     ├── app.py             # Flask web app
     
@@ -26,46 +26,34 @@
     
     ├── static/            # (Optional) CSS/JS files
     
-⚙️ Installation
-1️⃣ Clone the repository
+## **⚙️ Installation**
+       1️⃣ Clone the repository
+       
+        git clone https://github.com/your-username/fake-news-detector.git
+        cd fake-news-detector
+        
+       2️⃣ Create & activate virtual environment (optional but recommended)
+        python -m venv venv
+        source venv/bin/activate   # Linux/Mac
+        venv\Scripts\activate      # Windows
+        
+       3️⃣ Install dependencies
+        pip install -r requirements.txt
+        
+       4️⃣ Ensure you have the dataset
+        Place Fake.csv and True.csv inside the data/ folder.
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/fake-news-detector.git
-cd fake-news-detector
-2️⃣ Create & activate virtual environment (optional but recommended)
+       ▶️ Usage
+        Run the Flask app:
+        python app.py
+        Then open your browser and go to http://127.0.0.1:5000/
 
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-3️⃣ Install dependencies
+## **🧠 Model Details**
+      Uses Multinomial Naive Bayes
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4️⃣ Ensure you have the dataset
-Place Fake.csv and True.csv inside the data/ folder.
+      Text preprocessing: lowercasing, removing punctuation
 
-▶️ Usage
-Run the Flask app:
+      Feature extraction: CountVectorizer + TF-IDF Transformer
 
-bash
-Copy
-Edit
-python app.py
-Then open your browser and go to http://127.0.0.1:5000/
-
-🧠 Model Details
-Uses Multinomial Naive Bayes
-
-Text preprocessing: lowercasing, removing punctuation
-
-Feature extraction: CountVectorizer + TF-IDF Transformer
-
-Dataset: Combination of Fake.csv & True.csv
+      Dataset: Combination of Fake.csv & True.csv
 
